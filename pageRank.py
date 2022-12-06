@@ -2,14 +2,20 @@ from page import Page
 
 class PageRank():
 
-    def CalculatePageRankByIteration(pageList, iteration):
-        for i in range(0, iteration):
-            
-        
-    def calculatePageRank(pageList:Page):
-        otherPr = 0
-        for page in pageList:
-            for links in page.eingehendeLinks:
-                otherPr +=(links.pageRank / len(page.ausgehendeLinks))
-            page.pageRank = ((1 - 0.85) + 0.85 * otherPr)
-    
+    def calculatePageRankByIteration(self, pageList, iterations, dampFactor):
+        for i in range(iterations):
+            newPageRanks = []
+            print()
+            print("Iteration: ", str(i+1))
+            for page in pageList:
+                
+                pageRankSum = 0
+                for eingehenderLink in page.eingehendeLinks:
+                    pageRankSum = pageRankSum + eingehenderLink.pageRank/len(eingehenderLink.ausgehendeLinks)   
+                pagerank = ((1 - dampFactor) + dampFactor * (pageRankSum))
+                newPageRanks.append(pagerank)
+            count = 0
+            for page in pageList:
+                page.pageRank = newPageRanks[count]
+                count += 1
+                print(page.url+": "+str(page.pageRank))

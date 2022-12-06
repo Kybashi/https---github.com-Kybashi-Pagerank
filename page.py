@@ -1,6 +1,6 @@
 class Page():
-    def __init__(self, ausgehendeLinks, eingehendeLinks, url, pageRank):
-        self.ausgehendeLinks = ausgehendeLinks
-        self.eingehendeLinks = eingehendeLinks
+    def __init__(self, url, pageRank):
+        self.ausgehendeLinks = []
+        self.eingehendeLinks = []
         self.url = url
         self.pageRank = pageRank
