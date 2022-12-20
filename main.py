@@ -2,7 +2,6 @@ from pageRank import PageRank
 import page
 
 
-
 a1 = page.Page("google.de", 1)
 b1 = page.Page("wikipedia.de", 1)
 c1 = page.Page("youtube.de", 1)
