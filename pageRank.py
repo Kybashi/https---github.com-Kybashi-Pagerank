@@ -50,3 +50,4 @@ def test_pagerank():
     assert b1.pageRank == 0.6442449692660287
     assert c1.pageRank != vorherC1
     assert c1.pageRank == 1.1921432364477629
+test_pagerank()
