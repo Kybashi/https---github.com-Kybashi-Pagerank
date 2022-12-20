@@ -1,5 +1,5 @@
 from page import Page
-import pageRank as PageRank
+from pageRank import PageRank
 
 
 def test_pagerank():
