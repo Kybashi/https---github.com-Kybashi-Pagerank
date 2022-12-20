@@ -20,4 +20,4 @@ pageList = [a1,b1,c1]
 
 pr = PageRank()
 
-pr.calculatePageRankByIteration(pageList, 20, 0.85)
+pr.calculatePageRankByIteration(pageList, 15, 0.85)
