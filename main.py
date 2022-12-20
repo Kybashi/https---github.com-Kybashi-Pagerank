@@ -2,6 +2,10 @@ from pageRank import PageRank
 import page
 
 
+iterations = 15
+
+dampingfactor = 0.85
+
 a1 = page.Page("google.de", 1)
 b1 = page.Page("wikipedia.de", 1)
 c1 = page.Page("youtube.de", 1)
@@ -19,4 +23,4 @@ pageList = [a1,b1,c1]
 
 pr = PageRank()
 
-pr.calculatePageRankByIteration(pageList, 15, 0.85)
+pr.calculatePageRankByIteration(pageList, iterations, dampingfactor)
